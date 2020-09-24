@@ -16,4 +16,17 @@ public class SecondCalculator {
     public static boolean isGreaterThan100 (int value1){
         return value1 > 100;
     }
+
+    public static int getFaculty (int input) {
+        int referenceNumber = 1;
+        for (int i = 1; i <= input ; i++) {
+            referenceNumber = referenceNumber * i;
+        }
+
+        return referenceNumber;
+    }
+
+
 }
+
+

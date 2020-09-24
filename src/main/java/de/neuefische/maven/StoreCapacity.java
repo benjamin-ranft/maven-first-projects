@@ -2,7 +2,7 @@ package de.neuefische.maven;
 
 public class StoreCapacity {
 
-    public static String storeFullAlarm (int customers,  String alarmLevel){
+    public static String storeFullAlarm (int customers, String alarmLevel){
 
         switch (alarmLevel) {
             case "Rot":
