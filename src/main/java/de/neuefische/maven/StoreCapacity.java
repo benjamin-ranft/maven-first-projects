@@ -3,31 +3,22 @@ package de.neuefische.maven;
 public class StoreCapacity {
 
     public static String storeFullAlarm (int customers,  String alarmLevel){
-
+        int maxCapacity = -1;
         switch (alarmLevel) {
             case "Rot":
-                if (customers == 0){
-                    return "Maximale Personenzahl nicht überschritten";
-                } else {
-                    return "Zu viele Personen";
-                }
+                maxCapacity = 0;
 
             case "Gelb":
-                if (customers <= 30){
-                    return "Maximale Personenzahl nicht überschritten";
-                } else {
-                    return "Zu viele Personen";
-                }
-
+                maxCapacity =30;
             case "Grün":
-                if (customers <= 60){
-                    return "Maximale Personenzahl nicht überschritten";
-                } else {
-                    return "Zu viele Personen";
-                }
-
+              maxCapacity = 60;
             default:
-                return "Corona is over!";
+               // return "Corona is over!";
+        }
+        if(customers > maxCapacity){
+            return "Zu viele Personen";
+        } else{
+            return "Maximale Personenzahl nicht überschritten";
         }
     }
 
